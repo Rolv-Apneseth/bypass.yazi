@@ -5,6 +5,8 @@
 > [!NOTE]
 > This might be a little inconsistent for now as I'm currently using a (lazy) workaround to `Yazi`, for the time being, not having a way to tell if a directory is loaded. This will be fixed with `Yazi v0.2.6`.
 
+<https://github.com/Rolv-Apneseth/bypass.yazi/assets/69486699/5487537b-fe01-40e9-bc34-4d1116b491b5>
+
 ## Requirements
 
 - [Yazi](https://github.com/sxyazi/yazi) v0.2.4+
@@ -38,7 +40,9 @@ run = "plugin bypass --args=reverse"
 desc = "Recursively enter parent directory, skipping parents with only a single subdirectory"
 ```
 
-And that's it. You can bind any key you like, including overriding the default `enter` and `leave` bindings by setting them to `l` and `h` respectively. Note that  if you're using the [smart enter tip](https://yazi-rs.github.io/docs/tips#smart-enter) from the documentation, this plugin can replace that entirely by using this keybind instead:
+And that's it. You can bind any key you like, including overriding the default `enter` and `leave` bindings by setting them to `l` and `h` respectively.
+
+Note that  if you're using the [smart enter tip](https://yazi-rs.github.io/docs/tips#smart-enter) from the documentation, this plugin can replace that entirely by using this keybind instead:
 
 ```toml
 [[manager.prepend_keymap]]
