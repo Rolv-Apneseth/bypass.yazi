@@ -2,9 +2,6 @@
 
 [Yazi](https://github.com/sxyazi/yazi) plugin for bidirectional skipping of directories which only have a single subdirectory
 
-> [!NOTE]
-> This might be a little inconsistent for now as I'm currently using a (lazy) workaround to `Yazi`, for the time being, not having a way to tell if a directory is loaded. This will be fixed with `Yazi v0.2.6`.
-
 <https://github.com/Rolv-Apneseth/bypass.yazi/assets/69486699/5487537b-fe01-40e9-bc34-4d1116b491b5>
 
 ## Requirements
