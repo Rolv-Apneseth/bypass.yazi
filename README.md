@@ -6,19 +6,20 @@
 
 ## Requirements
 
-- [Yazi](https://github.com/sxyazi/yazi) v0.2.4+
+- [Yazi](https://github.com/sxyazi/yazi) v0.3.3+
 
 ## Installation
 
-### Linux / MacOS
-
-```sh
-git clone https://github.com/Rolv-Apneseth/bypass.yazi.git ~/.config/yazi/plugins/bypass.yazi
+```bash
+ya pack -a Rolv-Apneseth/bypass
 ```
 
-### Windows
+### Manual
 
 ```sh
+# Linux / MacOS
+git clone https://github.com/Rolv-Apneseth/bypass.yazi.git ~/.config/yazi/plugins/bypass.yazi
+# Windows
 git clone https://github.com/Rolv-Apneseth/bypass.yazi.git %AppData%\yazi\config\plugins\bypass.yazi
 ```
 
