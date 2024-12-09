@@ -72,9 +72,9 @@ local bypass_rev = ya.sync(function(_)
 end)
 
 return {
-    entry = function(_, args)
-        local use_smart_enter = args and args[1] == "smart_enter"
-        local is_reverse = args and args[1] == "reverse"
+    entry = function(_, job)
+        local use_smart_enter = job.args and job.args[1] == "smart_enter"
+        local is_reverse = job.args and job.args[1] == "reverse"
 
         -- Initial run, should behave like a regular enter/smart-enter/leave
         local run = is_reverse and initial_rev() or initial(use_smart_enter)
