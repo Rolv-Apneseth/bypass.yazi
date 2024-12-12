@@ -72,7 +72,9 @@ local bypass_rev = ya.sync(function(_)
 end)
 
 return {
-    entry = function(_, args)
+    entry = function(_, job)
+        -- old version of Yazi will pass args directly, new version passes job. Below code ensures we derive args in both 0.3 and 0.4 Yazi API versions.
+        local args = job.args or job
         local use_smart_enter = args and args[1] == "smart_enter"
         local is_reverse = args and args[1] == "reverse"
 
