@@ -6,7 +6,7 @@
 
 ## Requirements
 
-- [Yazi](https://github.com/sxyazi/yazi) v0.3.3+
+- [Yazi](https://github.com/sxyazi/yazi) v25.3.2+
 
 ## Installation
 
@@ -34,7 +34,7 @@ run = "plugin bypass"
 desc = "Recursively enter child directory, skipping children with only a single subdirectory"
 [[manager.prepend_keymap]]
 on = [ "H" ]
-run = "plugin bypass --args=reverse"
+run = "plugin bypass reverse"
 desc = "Recursively enter parent directory, skipping parents with only a single subdirectory"
 ```
 
@@ -45,6 +45,6 @@ Note that  if you're using the [smart enter tip](https://yazi-rs.github.io/docs/
 ```toml
 [[manager.prepend_keymap]]
 on = [ "l" ]
-run = "plugin bypass --args=smart_enter"
+run = "plugin bypass smart_enter"
 desc = "Open a file, or recursively enter child directory, skipping children with only a single subdirectory"
 ```
