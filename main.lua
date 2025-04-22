@@ -1,3 +1,5 @@
+--- @since 25.3.2
+
 -- For development
 --[[ local function notify(message) ]]
 --[[     ya.notify({ title = "Bypass", content = message, timeout = 5 }) ]]
