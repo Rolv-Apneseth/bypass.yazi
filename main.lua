@@ -19,8 +19,8 @@ local is_directory_loading = ya.sync(function(_)
 end)
 
 ---Enter hovered item if it is a directory
----@type fun(use_smart_enter: boolean): boolean
-local initial = ya.sync(function(_, use_smart_enter)
+---@type fun(use_smart-enter: boolean): boolean
+local initial = ya.sync(function(_, use_smart-enter)
     local hovered = cx.active.current.hovered
     if hovered == nil then
         return false
@@ -28,7 +28,7 @@ local initial = ya.sync(function(_, use_smart_enter)
 
     if not hovered.cha.is_dir then
         -- Open file if using "smart enter"
-        if use_smart_enter then
+        if use_smart-enter then
             ya.manager_emit("escape", { visual = true, select = true })
             ya.manager_emit("open", { hovered = true })
         end
@@ -84,11 +84,11 @@ return {
     entry = function(_, job)
         -- old version of Yazi will pass args directly, new version passes job. Below code ensures we derive args in both 0.3 and 0.4 Yazi API versions.
         local args = job.args or job
-        local use_smart_enter = args and args[1] == "smart_enter"
+        local use_smart-enter = args and args[1] == "smart-enter"
         local is_reverse = args and args[1] == "reverse"
 
         -- Initial run, should behave like a regular enter/smart-enter/leave
-        local run = is_reverse and initial_rev() or initial(use_smart_enter)
+        local run = is_reverse and initial_rev() or initial(use_smart-enter)
 
         while run do
             -- Wait for directory to have loaded
