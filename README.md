@@ -45,6 +45,6 @@ Note that  if you're using the [smart enter tip](https://yazi-rs.github.io/docs/
 ```toml
 [[manager.prepend_keymap]]
 on = [ "l" ]
-run = "plugin bypass smart_enter"
+run = "plugin bypass smart-enter"
 desc = "Open a file, or recursively enter child directory, skipping children with only a single subdirectory"
 ```
