@@ -28,11 +28,11 @@ git clone https://github.com/Rolv-Apneseth/bypass.yazi.git %AppData%\yazi\config
 Add this to your `keymap.toml`:
 
 ```toml
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = [ "L" ]
 run = "plugin bypass"
 desc = "Recursively enter child directory, skipping children with only a single subdirectory"
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = [ "H" ]
 run = "plugin bypass reverse"
 desc = "Recursively enter parent directory, skipping parents with only a single subdirectory"
@@ -43,7 +43,7 @@ And that's it. You can bind any key you like, including overriding the default `
 Note that  if you're using the [smart enter tip](https://yazi-rs.github.io/docs/tips#smart-enter) from the documentation, this plugin can replace that entirely by using this keybind instead:
 
 ```toml
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = [ "l" ]
 run = "plugin bypass smart-enter"
 desc = "Open a file, or recursively enter child directory, skipping children with only a single subdirectory"
