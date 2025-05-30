@@ -11,7 +11,7 @@
 ## Installation
 
 ```bash
-ya pack -a Rolv-Apneseth/bypass
+ya pkg add Rolv-Apneseth/bypass
 ```
 
 ### Manual
