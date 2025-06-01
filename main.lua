@@ -1,4 +1,4 @@
---- @since 25.3.2
+---@since 25.5.28
 
 -- For development
 --[[ local function notify(message) ]]
@@ -29,14 +29,14 @@ local initial = ya.sync(function(_, use_smart_enter)
     if not hovered.cha.is_dir then
         -- Open file if using "smart enter"
         if use_smart_enter then
-            ya.manager_emit("escape", { visual = true, select = true })
-            ya.manager_emit("open", { hovered = true })
+            ya.emit("escape", { visual = true, select = true })
+            ya.emit("open", { hovered = true })
         end
         return false
     end
 
-    ya.manager_emit("escape", { visual = true, select = true })
-    ya.manager_emit("enter", { hovered = true })
+    ya.emit("escape", { visual = true, select = true })
+    ya.emit("enter", { hovered = true })
 
     return true
 end)
@@ -50,7 +50,7 @@ local bypass = ya.sync(function(_)
         return false
     end
 
-    ya.manager_emit("enter", { hovered = true })
+    ya.emit("enter", { hovered = true })
 
     return true
 end)
@@ -62,8 +62,8 @@ local initial_rev = ya.sync(function(_)
         return false
     end
 
-    ya.manager_emit("escape", { visual = true, select = true })
-    ya.manager_emit("leave", {})
+    ya.emit("escape", { visual = true, select = true })
+    ya.emit("leave", {})
 
     return true
 end)
@@ -75,7 +75,7 @@ local bypass_rev = ya.sync(function(_)
         return false
     end
 
-    ya.manager_emit("leave", {})
+    ya.emit("leave", {})
 
     return true
 end)
