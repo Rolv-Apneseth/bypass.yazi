@@ -1,9 +1,12 @@
----@since 25.5.28
+---@since 25.3.2
 
 -- For development
 --[[ local function notify(message) ]]
 --[[     ya.notify({ title = "Bypass", content = message, timeout = 5 }) ]]
 --[[ end ]]
+
+-- `ya.emit` as of 25.5.28
+local emit = ya.emit or ya.manager_emit
 
 ---Returns the loading state of the current directory
 ---@type fun(): boolean
@@ -29,14 +32,14 @@ local initial = ya.sync(function(_, use_smart_enter)
     if not hovered.cha.is_dir then
         -- Open file if using "smart enter"
         if use_smart_enter then
-            ya.emit("escape", { visual = true, select = true })
-            ya.emit("open", { hovered = true })
+            emit("escape", { visual = true, select = true })
+            emit("open", { hovered = true })
         end
         return false
     end
 
-    ya.emit("escape", { visual = true, select = true })
-    ya.emit("enter", { hovered = true })
+    emit("escape", { visual = true, select = true })
+    emit("enter", { hovered = true })
 
     return true
 end)
@@ -50,7 +53,7 @@ local bypass = ya.sync(function(_)
         return false
     end
 
-    ya.emit("enter", { hovered = true })
+    emit("enter", { hovered = true })
 
     return true
 end)
@@ -62,8 +65,8 @@ local initial_rev = ya.sync(function(_)
         return false
     end
 
-    ya.emit("escape", { visual = true, select = true })
-    ya.emit("leave", {})
+    emit("escape", { visual = true, select = true })
+    emit("leave", {})
 
     return true
 end)
@@ -75,7 +78,7 @@ local bypass_rev = ya.sync(function(_)
         return false
     end
 
-    ya.emit("leave", {})
+    emit("leave", {})
 
     return true
 end)
