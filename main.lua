@@ -1,4 +1,4 @@
---- @since 25.3.2
+--- @since v25.5.28
 
 -- For development
 --[[ local function notify(message) ]]
