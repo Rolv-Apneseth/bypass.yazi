@@ -32,13 +32,11 @@ local initial = ya.sync(function(_, use_smart_enter)
     if not hovered.cha.is_dir then
         -- Open file if using "smart enter"
         if use_smart_enter then
-            emit("escape", { visual = true, select = true })
             emit("open", { hovered = true })
         end
         return false
     end
 
-    emit("escape", { visual = true, select = true })
     emit("enter", { hovered = true })
 
     return true
@@ -65,7 +63,6 @@ local initial_rev = ya.sync(function(_)
         return false
     end
 
-    emit("escape", { visual = true, select = true })
     emit("leave", {})
 
     return true

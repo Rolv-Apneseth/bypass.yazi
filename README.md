@@ -40,11 +40,18 @@ desc = "Recursively enter parent directory, skipping parents with only a single 
 
 And that's it. You can bind any key you like, including overriding the default `enter` and `leave` bindings by setting them to `l` and `h` respectively.
 
-Note that  if you're using the [smart enter tip](https://yazi-rs.github.io/docs/tips#smart-enter) from the documentation, this plugin can replace that entirely by using this keybind instead:
+Note that if you're using the [smart enter tip](https://yazi-rs.github.io/docs/tips#smart-enter) from the documentation, this plugin can replace that entirely by using this keybind instead:
 
 ```toml
 [[mgr.prepend_keymap]]
 on = [ "l" ]
 run = "plugin bypass smart-enter"
 desc = "Open a file, or recursively enter child directory, skipping children with only a single subdirectory"
+```
+
+If you wish to also escape visual selections at the same time as activating this plugin,
+you can modify the above keybinds with, e.g.:
+
+```toml
+run = ["plugin bypass smart-enter", "escape --visual --select" ]
 ```
